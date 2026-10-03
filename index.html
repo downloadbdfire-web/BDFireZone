@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BDFIRE ZONE - Download</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Poppins', 'Hind Siliguri', sans-serif;
+            color: #111827;
+
+            background:
+                radial-gradient(circle at 10% 5%, rgba(0, 174, 255, .12), transparent 25%),
+                radial-gradient(circle at 95% 90%, rgba(91, 75, 255, .10), transparent 28%),
+                linear-gradient(135deg, #f8fbff, #ffffff 50%, #f1f6fc);
+
+            padding: 28px 14px 45px;
+        }
+
+        /* MAIN CARD */
+
+        .container {
+            width: 100%;
+            max-width: 630px;
+            margin: auto;
+            padding: 30px;
+
+            border-radius: 28px;
+
+            background: rgba(255,255,255,.88);
+
+            border: 1px solid rgba(120,145,180,.20);
+
+            box-shadow:
+                0 25px 70px rgba(25,55,95,.12),
+                0 5px 20px rgba(0,0,0,.04),
+                inset 0 0 40px rgba(255,255,255,.8);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+
+            width: 7px;
+            height: 7px;
+
+            background: #19c9ff;
+
+            border-radius: 50%;
+
+            top: 180px;
+            left: 45px;
+
+            box-shadow:
+                510px 140px 0 #6d5cff,
+                20px 520px 0 #19c9ff;
+
+            opacity: .65;
+        }
+
+        /* TOP LIGHT EFFECT */
+
+        .container::after {
+            content: "";
+
+            position: absolute;
+
+            width: 260px;
+            height: 260px;
+
+            right: -120px;
+            top: -120px;
+
+            background: rgba(0,190,255,.07);
+
+            border-radius: 50%;
+
+            filter: blur(10px);
+
+            pointer-events: none;
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo-area {
+            text-align: center;
+            margin-bottom: 22px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-circle {
+            width: 112px;
+            height: 112px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(145deg, #ffffff, #edf5fb);
+
+            border: 2px solid rgba(0,190,255,.30);
+
+            box-shadow:
+                0 12px 35px rgba(0,150,220,.13),
+                inset 0 0 20px rgba(0,190,255,.08);
+        }
+
+        .logo-circle i {
+            font-size: 46px;
+
+            color: #ff5a1f;
+
+            filter:
+                drop-shadow(0 0 7px rgba(255,90,31,.45))
+                drop-shadow(0 0 15px rgba(255,170,0,.20));
+        }
+
+
+        /* BRAND */
+
+        .brand {
+            margin-top: 22px;
+
+            font-size: 43px;
+            font-weight: 800;
+
+            letter-spacing: -1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #1565ff,
+                    #00aeea
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+
+            text-shadow:
+                0 5px 20px rgba(0,140,255,.10);
+        }
+
+
+        .badge {
+            display: inline-block;
+
+            margin-top: 8px;
+
+            padding: 6px 13px;
+
+            border-radius: 20px;
+
+            color: #078dbb;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            background: rgba(0,190,255,.07);
+
+            border: 1px solid rgba(0,170,230,.18);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .main-title {
+            text-align: center;
+
+            margin-top: 16px;
+
+            font-size: 27px;
+            font-weight: 800;
+
+            color: #172033;
+        }
+
+        .main-title span {
+            color: #009ed6;
+        }
+
+        .description {
+            text-align: center;
+
+            color: #68758b;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            margin: 10px auto 25px;
+
+            max-width: 510px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .download-buttons {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 11px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .download-btn {
+            min-height: 53px;
+
+            border: none;
+
+            border-radius: 14px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .download-btn:active {
+            transform: scale(.97);
+        }
+
+
+        /* ANDROID */
+
+        .android {
+            background:
+                linear-gradient(
+                    135deg,
+                    #05bd70,
+                    #13a967
+                );
+
+            box-shadow:
+                0 10px 25px rgba(0,190,110,.18);
+        }
+
+
+        /* IOS */
+
+        .ios {
+            background:
+                linear-gradient(
+                    135deg,
+                    #5a46df,
+                    #8d49d7
+                );
+
+            box-shadow:
+                0 10px 25px rgba(105,70,220,.18);
+        }
+
+
+        /* TELEGRAM */
+
+        .telegram {
+            width: 100%;
+
+            margin-top: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #079bd8,
+                    #27b6e9
+                );
+
+            box-shadow:
+                0 10px 25px rgba(20,160,220,.16);
+        }
+
+
+        /* =========================
+           DIVIDER
+        ========================= */
+
+        .divider {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin: 28px 0 20px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+
+            height: 1px;
+
+            flex: 1;
+
+            background: rgba(40,70,100,.10);
+        }
+
+        .divider span {
+            color: #69758a;
+
+            font-size: 11px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .features {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+        }
+
+        .feature {
+            min-height: 130px;
+
+            padding: 17px;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.96),
+                    rgba(246,250,254,.96)
+                );
+
+            border: 1px solid rgba(110,140,175,.16);
+
+            box-shadow:
+                0 8px 25px rgba(30,70,110,.06),
+                inset 0 0 25px rgba(255,255,255,.8);
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 14px 30px rgba(30,70,110,.10);
+        }
+
+        .feature-icon {
+            width: 35px;
+            height: 35px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            color: #168ed2;
+
+            background: rgba(0,165,230,.08);
+
+            border: 1px solid rgba(0,165,230,.10);
+
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
+            font-size: 12px;
+
+            margin-bottom: 5px;
+
+            color: #1d2939;
+        }
+
+        .feature p {
+            color: #758196;
+
+            font-size: 10px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           HOW TO START
+        ========================= */
+
+        .how {
+            margin-top: 20px;
+
+            padding: 20px;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #f7fbff,
+                    #ffffff
+                );
+
+            border: 1px solid rgba(60,125,180,.14);
+
+            box-shadow:
+                0 8px 25px rgba(30,70,110,.05);
+        }
+
+        .how-title {
+            text-align: center;
+
+            font-size: 13px;
+
+            margin-bottom: 15px;
+
+            color: #1b293c;
+        }
+
+        .step {
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            margin: 11px 0;
+
+            color: #657289;
+
+            font-size: 10px;
+        }
+
+        .number {
+            width: 25px;
+            height: 25px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: #008fca;
+
+            background: rgba(20,180,235,.08);
+
+            border: 1px solid rgba(20,180,235,.18);
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            margin-top: 25px;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid rgba(30,60,90,.08);
+
+            text-align: center;
+
+            color: #78859a;
+
+            font-size: 10px;
+        }
+
+        .footer strong {
+            color: #079dce;
+        }
+
+        .copyright {
+            margin-top: 6px;
+
+            color: #9aa5b6;
+
+            font-size: 9px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width: 520px) {
+
+            body {
+                padding: 15px 10px 30px;
+            }
+
+            .container {
+                padding: 22px 18px;
+
+                border-radius: 23px;
+            }
+
+            .logo-circle {
+                width: 100px;
+                height: 100px;
+            }
+
+            .logo-circle i {
+                font-size: 41px;
+            }
+
+            .brand {
+                font-size: 35px;
+            }
+
+            .main-title {
+                font-size: 23px;
+            }
+
+            .description {
+                font-size: 11px;
+            }
+
+            .download-buttons {
+                gap: 9px;
+            }
+
+            .download-btn {
+                font-size: 10px;
+
+                padding: 10px 5px;
+            }
+
+            .features {
+                gap: 10px;
+            }
+
+            .feature {
+                padding: 14px;
+
+                min-height: 125px;
+            }
+        }
+
+
+        @media(max-width: 360px) {
+
+            .brand {
+                font-size: 30px;
+            }
+
+            .download-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .feature {
+                min-height: 115px;
+            }
+        }
+
+    
+<style id="premium-bdfire-upgrade">
+:root{
+  --bg:#f4f8ff;
+  --ink:#101828;
+  --muted:#667085;
+  --cyan:#00b8ff;
+  --blue:#3b5cff;
+  --violet:#7c3aed;
+  --green:#00c878;
+  --telegram:#229ed9;
+  --glass:rgba(255,255,255,.72);
+  --line:rgba(80,105,140,.16);
+}
+
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 8% 0%,rgba(0,184,255,.18),transparent 28%),
+    radial-gradient(circle at 100% 18%,rgba(124,58,237,.13),transparent 30%),
+    radial-gradient(circle at 50% 100%,rgba(59,92,255,.10),transparent 34%),
+    linear-gradient(135deg,#eef7ff 0%,#fff 48%,#f5f1ff 100%);
+  background-attachment:fixed;
+}
+
+.container{
+  max-width:660px;
+  padding:34px;
+  border-radius:32px;
+  background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(247,251,255,.72));
+  border:1px solid rgba(255,255,255,.9);
+  box-shadow:
+    0 35px 100px rgba(30,70,120,.16),
+    0 10px 35px rgba(0,0,0,.06),
+    inset 0 1px 0 rgba(255,255,255,.95);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+.container::before{
+  width:6px;height:6px;top:150px;left:35px;
+  background:#00cfff;
+  box-shadow:540px 170px 0 #805cff,35px 560px 0 #00cfff,500px 610px 0 #ffb800;
+  animation:floatDots 6s ease-in-out infinite;
+}
+.container::after{
+  width:320px;height:320px;
+  right:-160px;top:-160px;
+  background:radial-gradient(circle,rgba(0,184,255,.14),transparent 68%);
+  filter:blur(2px);
+}
+
+.logo-circle{
+  width:118px;height:118px;
+  background:
+    radial-gradient(circle at 35% 25%,#fff,#edf7ff 55%,#dbeaff);
+  border:1px solid rgba(0,184,255,.35);
+  box-shadow:
+    0 20px 45px rgba(0,139,220,.18),
+    0 0 0 8px rgba(0,184,255,.045),
+    inset 0 0 30px rgba(0,184,255,.10);
+  position:relative;
+}
+.logo-circle::before{
+  content:"";
+  position:absolute;inset:-7px;border-radius:50%;
+  border:1px solid rgba(0,184,255,.18);
+  animation:ringPulse 2.8s ease-in-out infinite;
+}
+.logo-circle i{
+  font-size:49px;
+  background:linear-gradient(135deg,#ff4d21,#ff9d00);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 7px 16px rgba(255,94,0,.24));
+}
+.brand{
+  margin-top:24px;
+  font-size:45px;
+  letter-spacing:-1.7px;
+  background:linear-gradient(90deg,#2548ff 0%,#00aeea 48%,#6c43e8 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 8px 28px rgba(48,90,255,.12);
+}
+.badge{
+  padding:7px 14px;
+  color:#087da9;
+  background:linear-gradient(135deg,rgba(0,184,255,.10),rgba(124,58,237,.07));
+  border:1px solid rgba(0,170,230,.18);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.main-title{font-size:29px;letter-spacing:-.6px}
+.main-title span{
+  background:linear-gradient(90deg,#008fd0,#4b55ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.description{font-size:12.5px;color:#64748b}
+
+.download-buttons{gap:13px}
+.download-btn{
+  min-height:58px;
+  border-radius:17px;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  border:1px solid rgba(255,255,255,.34);
+  box-shadow:0 12px 28px rgba(30,70,120,.12),inset 0 1px 0 rgba(255,255,255,.28);
+  transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s ease,filter .22s ease;
+}
+.download-btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.30) 48%,transparent 72%);
+  transform:translateX(-130%);
+  transition:transform .65s ease;
+  z-index:-1;
+}
+.download-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 38px rgba(30,70,120,.19),inset 0 1px 0 rgba(255,255,255,.35);
+  filter:saturate(1.08);
+}
+.download-btn:hover::before{transform:translateX(130%)}
+.download-btn:active{transform:translateY(-1px) scale(.985)}
+.download-btn i{font-size:17px;filter:drop-shadow(0 2px 5px rgba(0,0,0,.18))}
+.android{background:linear-gradient(135deg,#00b96b,#00a75f 55%,#008f55)}
+.ios{background:linear-gradient(135deg,#5542e9,#7748d9 55%,#8d42c9)}
+.telegram{
+  margin-top:14px;
+  min-height:56px;
+  background:linear-gradient(135deg,#078fd0,#229ed9 55%,#28bce8);
+}
+
+.divider{margin:32px 0 21px}
+.divider::before,.divider::after{
+  background:linear-gradient(90deg,transparent,rgba(60,90,130,.18),transparent);
+}
+.divider span{
+  padding:6px 12px;
+  border-radius:99px;
+  color:#526174;
+  background:rgba(255,255,255,.55);
+  border:1px solid rgba(100,130,165,.13);
+}
+
+.features{gap:14px}
+.feature{
+  min-height:142px;
+  padding:18px;
+  border-radius:19px;
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(244,249,255,.76));
+  border:1px solid rgba(110,140,175,.14);
+  box-shadow:0 12px 30px rgba(30,70,110,.07),inset 0 1px 0 rgba(255,255,255,.9);
+  position:relative;
+  overflow:hidden;
+}
+.feature::after{
+  content:"";
+  position:absolute;
+  width:90px;height:90px;right:-45px;bottom:-50px;border-radius:50%;
+  background:rgba(0,184,255,.07);
+}
+.feature:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 38px rgba(30,70,110,.12),inset 0 1px 0 rgba(255,255,255,.95);
+}
+.feature-icon{
+  width:40px;height:40px;border-radius:12px;
+  color:#148ed0;
+  background:linear-gradient(145deg,rgba(0,180,245,.12),rgba(82,85,255,.07));
+  border:1px solid rgba(0,165,230,.14);
+  box-shadow:0 7px 18px rgba(0,150,220,.08),inset 0 1px 0 rgba(255,255,255,.9);
+}
+.feature h3{font-size:12.5px}
+.feature p{font-size:10.5px}
+
+.how{
+  margin-top:22px;
+  padding:21px;
+  border-radius:19px;
+  background:linear-gradient(145deg,rgba(247,251,255,.88),rgba(255,255,255,.70));
+  border:1px solid rgba(60,125,180,.14);
+  box-shadow:0 12px 30px rgba(30,70,110,.06),inset 0 1px 0 rgba(255,255,255,.9);
+}
+.how-title{font-size:13.5px}
+.step{
+  padding:8px 7px;
+  margin:5px 0;
+  border-radius:13px;
+  transition:background .2s ease,transform .2s ease;
+}
+.step:hover{background:rgba(0,184,255,.045);transform:translateX(3px)}
+.number{
+  width:29px;height:29px;
+  color:#008fca;
+  background:linear-gradient(145deg,rgba(20,180,235,.12),rgba(82,85,255,.08));
+  box-shadow:0 5px 13px rgba(0,150,220,.08);
+}
+
+.footer{
+  margin-top:28px;
+  padding-top:20px;
+  color:#738197;
+}
+.footer strong{
+  background:linear-gradient(90deg,#008fc8,#5c4ee9);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+@keyframes ringPulse{
+  0%,100%{transform:scale(.98);opacity:.45}
+  50%{transform:scale(1.035);opacity:1}
+}
+@keyframes floatDots{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
+@media(max-width:520px){
+  body{padding:12px 8px 28px}
+  .container{padding:25px 17px;border-radius:25px}
+  .logo-circle{width:105px;height:105px}
+  .brand{font-size:36px}
+  .main-title{font-size:23px}
+  .download-btn{min-height:56px;font-size:10.5px}
+  .feature{min-height:132px;padding:15px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-area">
+
+        <div class="logo-circle">
+            <i class="fas fa-fire"></i>
+        </div>
+
+        <div class="brand">
+            BDFIRE ZONE
+        </div>
+
+        <div class="badge">
+            ⚡ NEXT LEVEL GAMING EXPERIENCE
+        </div>
+
+    </div>
+
+
+
+    <!-- TITLE -->
+
+    <h1 class="main-title">
+        আপনার গেমিং জার্নি <span>নতুন শুরু!</span>
+    </h1>
+
+    <p class="description">
+        BDFIRE ZONE-এর সাথে আপনার gaming experience আরও সহজ,
+        দ্রুত এবং সুন্দরভাবে উপভোগ করুন। Android App ব্যবহার করুন
+        অথবা iPhone/iPad থেকে আমাদের web platform visit করুন।
+    </p>
+
+
+
+    <!-- DOWNLOAD BUTTONS -->
+
+    <div class="download-buttons">
+
+
+        <!-- NEW GITHUB APK LINK -->
+
+        <a
+            href="https://github.com/yeamintiba7483-eng/BDFireZone-APK/releases/latest/download/BDFirezone.apk"
+            class="download-btn android"
+        >
+
+            <i class="fab fa-android"></i>
+
+            Download For Android Apk
+
+        </a>
+
+
+
+        <!-- IOS / WEB -->
+
+        <a
+            href="https://yeaminmia7482-cyber.github.io/BDFirezone/"
+            class="download-btn ios"
+        >
+
+            <i class="fab fa-apple"></i>
+
+            Open / Visit For iOS
+
+        </a>
+
+    </div>
+
+
+
+    <!-- TELEGRAM -->
+
+    <a
+        href="https://t.me/bd_fire_zone"
+        class="download-btn telegram"
+    >
+
+        <i class="fab fa-telegram"></i>
+
+        Join Telegram Support
+
+    </a>
+
+
+
+    <!-- DIVIDER -->
+
+    <div class="divider">
+
+        <span>
+            কেন BDFIRE ZONE?
+        </span>
+
+    </div>
+
+
+
+    <!-- FEATURES -->
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+
+            <h3>
+                Fast & Smooth
+            </h3>
+
+            <p>
+                দ্রুত এবং smooth interface-এর মাধ্যমে
+                সহজে platform ব্যবহার করুন।
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                <i class="fas fa-mobile-screen"></i>
+            </div>
+
+            <h3>
+                Mobile Friendly
+            </h3>
+
+            <p>
+                Android, iPhone, iPad সহ বিভিন্ন
+                screen size-এর জন্য responsive design।
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                <i class="fas fa-shield-halved"></i>
+            </div>
+
+            <h3>
+                Secure Experience
+            </h3>
+
+            <p>
+                account access এবং platform ব্যবহারে
+                নিরাপদ ও পরিষ্কার user experience।
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+
+            <h3>
+                Telegram Support
+            </h3>
+
+            <p>
+                যেকোনো প্রশ্ন বা সমস্যায় support
+                channel-এর মাধ্যমে যোগাযোগ করতে পারবেন।
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HOW TO START -->
+
+    <div class="how">
+
+        <div class="how-title">
+            ❔ <b>কীভাবে শুরু করবেন?</b>
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                1
+            </div>
+
+            <span>
+                Android হলে APK Download করুন।
+            </span>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                2
+            </div>
+
+            <span>
+                iPhone/iPad হলে Open / Visit For iOS নির্বাচন করুন।
+            </span>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                3
+            </div>
+
+            <span>
+                Platform-এ গিয়ে প্রয়োজনীয় account setup সম্পন্ন করুন।
+            </span>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                4
+            </div>
+
+            <span>
+                Support প্রয়োজন হলে Telegram-এ যোগাযোগ করুন।
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        Welcome to <strong>BDFIRE ZONE</strong> 🎮
+
+        <div class="copyright">
+            © 2026 | Designed for a modern gaming experience
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script>
+document.querySelectorAll('.download-btn').forEach(btn=>{
+  btn.addEventListener('click',e=>{
+    const r=document.createElement('span');
+    const rect=btn.getBoundingClientRect();
+    const size=Math.max(rect.width,rect.height)*1.2;
+    r.style.cssText=`position:absolute;width:${size}px;height:${size}px;border-radius:50%;
+      left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px;
+      background:rgba(255,255,255,.24);transform:scale(0);pointer-events:none;
+      animation:bdfireRipple .55s ease-out forwards;`;
+    btn.appendChild(r);
+    setTimeout(()=>r.remove(),600);
+  });
+});
+const st=document.createElement('style');
+st.textContent='@keyframes bdfireRipple{to{transform:scale(1);opacity:0}}';
+document.head.appendChild(st);
+</script>
+
+</body>
+</html>
